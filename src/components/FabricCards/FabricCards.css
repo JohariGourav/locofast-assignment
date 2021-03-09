@@ -1,0 +1,19 @@
+.FabricCards {
+    /* position: absolute; */
+    /* left: 170px;
+    right: 170px;
+    top: 250px;
+    bottom: 250px; */
+    /* overflow-y: scroll; */
+    margin: 30px 170px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    /* White */
+
+    background: #FFFFFF;
+}

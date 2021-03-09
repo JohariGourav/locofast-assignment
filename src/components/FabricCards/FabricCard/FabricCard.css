@@ -1,0 +1,59 @@
+.FabricCard {
+    /* position: absolute; */
+    width: 246px;
+    height: 358px;
+    /* left: calc(50% - 246px/2 + 131px); */
+    /* top: 0px; */
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 1, 38, 0.25);
+    border-radius: 8px;
+}
+
+.FabricImg {
+    /* position: absolute; */
+    height: 250px;
+    margin: 16px 16px 0 16px;
+    /* left: 16px; */
+    /* right: 16px; */
+    /* top: 16px; */
+
+    border-radius: 0px;
+}
+
+.FabricDescription {
+    /* position: absolute; */
+    height: 40px;
+    margin: 0 16px;
+    /* left: 16px;
+    right: 16px;
+    top: 278px; */
+
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+    /* Black */
+    color: #000126;
+}
+
+.FabricMoreColours {
+    /* position: absolute; */
+    height: 16px;
+    margin: 0 16px;
+    /* left: 16px;
+    right: 16px;
+    top: 326px; */
+
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* Gray 2 */
+
+    color: #676773;
+}
