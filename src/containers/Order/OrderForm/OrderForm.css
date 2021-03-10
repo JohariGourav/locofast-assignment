@@ -5,14 +5,14 @@
     background: #FFFFFF;
 /* Gray 5 */
 
-border: 1px solid #E5E5E5;
-box-sizing: border-box;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-border-radius: 4px;
-max-width: 450px;
-height: 300px;
-overflow: scroll;
-padding: 4px 12px;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    max-width: 100%;
+    height: 300px;
+    overflow: scroll;
+    padding: 4px 12px;
 }
 
 .DesignItem {
@@ -32,6 +32,21 @@ padding: 4px 12px;
     margin: 5px;
 }
 
+.left-arrow {
+    padding: 0 6px 0 0;
+    margin-right: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.error_outline {
+    color: #0067E2;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    height: 100%;
+    margin-right: 6px;
+    font-size: 20px;
+}
+
 form > span {
     height: 20px;
     
@@ -45,7 +60,7 @@ form > span {
 }
 
 input {
-    width: 80%;
+    width: 100%;
     border-radius: 2px;
     height: 30px;
     padding: 2px 8px;
@@ -69,7 +84,7 @@ input {
 .FormLabel {
     display: block;
     margin: 16px 0 4px 0;
-    height: 20px;
+    /* height: 20px; */
 
     font-family: Nunito Sans;
     font-style: normal;
@@ -82,7 +97,7 @@ input {
     color: #333340;
 }
 select {
-    width: 80%;
+    width: 100%;
     height: 30px;
     border-radius: 2px;
     background: rgba(255, 255, 255, 0.0001);
@@ -102,9 +117,12 @@ select {
 }
 
 .Ctas {
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
     justify-items: flex-end;
+    justify-content: flex-end;
     align-items: flex-end;
+    flex-wrap: wrap;
     position: absolute;
     bottom: 12px;
     right: 25px;
@@ -112,47 +130,44 @@ select {
     /* float: right; */
 }
 
-.BackBtn {
-    padding: 10px 16px;
+.cta-btn {
+    padding: 10px 12px;
     margin: 6px;
     cursor: pointer;
-    width: 71px;
     height: 40px;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 0.6s;
+}
+
+.cta-btn:hover {
+    background: #000126;
+    color: white;
+}
+
+.BackBtn {
+    width: 71px;
     /* White */
     background: #FFFFFF;
     /* Gray 4 */
     border: 1px solid #D4D4D4;
     box-sizing: border-box;
     border-radius: 4px;
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
     /* identical to box height, or 143% */
-  
     text-transform: uppercase;
     /* Black */
     color: #000126;
 }
 .NextBtn {
-    padding: 10px 12px;
-    margin: 6px;
-    cursor: pointer;
-    /* position: absolute; */
-    /* width: 69px; */
-    height: 40px;
     /* Gray 4 */
     text-transform: uppercase;
     color: #FFFFFF; 
     background: #0067E2;
     border-radius: 4px;
     border: none;
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
 }
 .NextBtn:disabled {
     background: #D4D4D4;
@@ -162,9 +177,13 @@ select {
 .Inventory-ctr {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: center;
+    column-gap: 16px;
+    align-items: flex-start;
     justify-content: space-between;
+}
+.Inventory {
+    display: grid;
+    grid-template-columns: auto;
 }
 /* .Inventory-ctr > label, .Inventory-ctr > input{
     display: inline;
@@ -176,14 +195,18 @@ select {
     padding: 0;
 }
 .Summary > h4 {
+    display: inline-flex;
+    align-items: center;
     margin: 12px 0;
-    height: 44px;
+    /* height: 44px; */
+    width: 100%;
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 44px;
+    font-size: 15px;
+    line-height: 25px;
     padding-left: 12px;
+    padding-right: 6px;
     /* identical to box height, or 143% */
     /* Black */
     color: #000126;
@@ -220,4 +243,16 @@ select {
     /* Black */
 
     color: #000126;
+}
+
+@media (max-width: 700px) {
+    .Ctas {
+        bottom: unset;
+        margin-top: 10px;
+        margin-bottom: 8px;
+        right: 16px;
+        /* min-height: 450px;
+        height: 90%; */
+    }
+    
 }

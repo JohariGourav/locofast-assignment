@@ -146,17 +146,20 @@ class OrderForm extends Component {
     }
 
     nextHandler = () => {
-        this.setState({ goNext: true, goBack: true});
+        this.setState({ goNext: true, goBack: true });
     }
     goBackHandler = () => {
-        this.setState({ goNext: false, goBack: false});
-    } 
+        this.setState({ goNext: false, goBack: false });
+    }
 
 
     render() {
         let summary = (
             <div className="Summary">
-                <h4>You won't be able to change the details later!</h4>
+                <h4>
+                    <i class="material-icons error_outline">error_outline</i>
+                    You won't be able to change the details later!
+                </h4>
                 <ul>
                     <li>
                         <label>Factory</label>
@@ -172,7 +175,7 @@ class OrderForm extends Component {
                     </li>
                     <li>
                         <label>Challan</label>
-                        <span>File_name_comes_here.pdf</span>
+                        <span style={{ background: '#F2F2F2', padding: '4px' }}>File_name_comes_here.pdf</span>
                     </li>
                 </ul>
             </div>
@@ -199,17 +202,20 @@ class OrderForm extends Component {
                     ))}
                 </div>
                 <div className="Inventory-ctr">
-                    <div>
+                    <div className="Inventory">
                         <label className="FormLabel">Assign quantity*</label>
                         <input type="number" onChange={this.quantityHandler} placeholder="Enter quantity" value={this.state.quantity} required />
                     </div>
-                    <div>
+                    <div className="Inventory">
                         <label className="FormLabel">Available Inventory</label>
                         <span>{this.state.inventory} meter</span>
                     </div>
+                    <div className="Inventory">
+                        <label className="FormLabel">Attach Challan</label>
+                        <input type="file" placeholder="Select File" />
+                    </div>
                 </div>
-                <label className="FormLabel">Attach Challan</label>
-                <input type="file" placeholder="Select File" />
+
 
             </form>
 
@@ -217,15 +223,26 @@ class OrderForm extends Component {
 
         return (
             <div>
-                <h4 style={{ 'margin-top': '0' }}>Assign to factory</h4>
+                <h4 style={{ 'margin-top': '0' }}>
+                    <i
+                        className="fa fa-arrow-left left-arrow"
+                        onClick={this.state.goBack ? this.goBackHandler : this.props.backBtn}>
+                    </i>
+                    Assign to factory
+                </h4>
                 {this.state.goNext ? summary : form}
                 <div className="Ctas" >
-                    <button 
-                        className="BackBtn" 
+                    <button
+                        className="BackBtn cta-btn"
                         onClick={this.state.goBack ? this.goBackHandler : this.props.backBtn}
                     >BACK
                     </button>
-                    <button disabled={!this.state.formIsValid} className="NextBtn" onClick={this.nextHandler}>{this.state.goNext ? 'ASSIGN TO FACTORY' : 'NEXT'}</button>
+                    <button
+                        disabled={!this.state.formIsValid}
+                        className="NextBtn cta-btn"
+                        onClick={this.nextHandler}
+                    >{this.state.goNext ? 'ASSIGN TO FACTORY' : 'NEXT'}
+                    </button>
                 </div>
             </div>
         );

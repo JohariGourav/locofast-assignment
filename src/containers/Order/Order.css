@@ -3,7 +3,7 @@
   }
 
 .OrderContainer {
-    /* margin-bottom: 6px; */
+    margin-bottom: 6px;
     height: 85%;
 }
 
@@ -19,7 +19,7 @@
 
 .OrderContents {
     display: grid;
-    grid-template-columns: 35% 60%;
+    grid-template-columns: 3fr 5fr;
     gap: 32px;
     min-height: 450px;
     height: 90%;
@@ -37,12 +37,29 @@
     /* position: absolute; */
     height: 100%;
     width: 100%;
+    max-width: 310px;
     max-height: 350.86px;
+    justify-self: center;
     /* margin: 16px 16px 0 16px; */
     /* left: 16px; */
     /* right: 16px; */
     /* top: 16px; */
 
     /* border-radius: 0px; */
+}
+
+@media (max-width: 700px) {
+    .OrderContainer {
+        height: auto;
+    }
+
+    .OrderContents {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        /* min-height: 450px;
+        height: 90%; */
+    }
+    
 }
 

@@ -15,6 +15,30 @@
     /* top: 30%; */
     box-sizing: border-box;
     transition: all 0.3s ease-out;
+    /* overflow: scroll; */
+}
+
+.bottom-bar {
+    /* content: ''; */
+    width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+    position: absolute;
+    left: 0;
+    bottom: 67px;
+    /* content: "________________________________"; */
+  /* background-color: #FFBA10; */
+  /* border-color: black; */
+  /* border-style: dotted; */
+}
+
+@media (max-width: 700px) {
+    .Modal {
+        overflow-y: auto;
+        padding: 14px;
+    }
+    .bottom-bar {
+        bottom: unset;
+    }
 }
 
 @media (min-width: 600px) {

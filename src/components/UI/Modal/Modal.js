@@ -22,6 +22,7 @@ class Modal extends Component {
                     }}
                 >
                     {this.props.children}
+                    <div className="bottom-bar"></div>
                 </div>
             </React.Fragment>
         );

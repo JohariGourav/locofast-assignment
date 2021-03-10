@@ -7,3 +7,10 @@
     background: #0067E2;
     width: 72px;
 }
+
+@media (max-width: 700px) {
+    .SideBar {
+        width: 50px;
+    }
+    
+}
